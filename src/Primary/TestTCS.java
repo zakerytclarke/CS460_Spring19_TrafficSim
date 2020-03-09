@@ -199,23 +199,24 @@ class TestTCS extends Thread {
         while(running){
 
             //Execute current state
-            outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
+            OutputController.outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
 
             //Check if we should transition to the next state
 
             //Check Emergency
-            Direction emergency=detectEmergency(north,south,east,west);
+            Direction emergency = ExceptionalStateController.detectEmergency(north,south,east,west);
+
             if(emergency != null){//Check Emergency Preemption
                 //Transition out of state to emergency
                 if(currentState.nextEmergency!=null){
                     currentState=currentState.nextEmergency;
-                    outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
+                    OutputController.outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
                     sleep(currentState.timer);
                 }
 
-                setRed(north_south);//All cars stop
-                setRed(east_west);//All cars stop
-                outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
+                OutputController.setRed(north_south);//All cars stop
+                OutputController.setRed(east_west);//All cars stop
+                OutputController.outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
                 OutputController.stopPeds(north_south_ped, east_west_ped, currentState);
                 sleep(redClearanceInterval);
                 if(emergency==Direction.N){
@@ -230,13 +231,13 @@ class TestTCS extends Thread {
                 if(emergency==Direction.W){
                     OutputController.handleEmergencyState(west);
                 }
-                while(emergency==detectEmergency(north,south,east,west)){
+                while(emergency== ExceptionalStateController.detectEmergency(north,south,east,west)){
                     //Wait until ambulance passes
                 }
                 sleep(redClearanceInterval);
                 //Clearance Interval for Emergency Vehicle
-                setRed(north_south);
-                setRed(east_west);
+                OutputController.setRed(north_south);
+                OutputController.setRed(east_west);
                 sleep(3000);
                 currentState=Red_All;
 
@@ -244,11 +245,8 @@ class TestTCS extends Thread {
 
 
 
-
             if(System.currentTimeMillis()>currentTime+currentTimer){//Check Timer has elapsed
                 System.out.println(currentState.turn.toString()+":"+currentState.straight.toString()+":"+currentState.ped.toString()+":"+currentDirection.toString()+":"+currentTimer);
-
-
                 if(currentState.changeDirection){//Change direction if cycle is done
                     if(currentDirection==Direction.NS){
                         currentDirection=Direction.EW;
@@ -260,24 +258,25 @@ class TestTCS extends Thread {
                 //Check if Left turn Lane is occupied
                 boolean turnLaneOccupied;
                 if(currentDirection==Direction.NS){
-                    turnLaneOccupied=north_south.get(0).isCarOnLane()||north_south.get(3).isCarOnLane();
+                    turnLaneOccupied = north_south.get(0).isCarOnLane()|| north_south.get(3).isCarOnLane();
                 }else{
-                    turnLaneOccupied=east_west.get(0).isCarOnLane()||east_west.get(3).isCarOnLane();
+                    turnLaneOccupied = east_west.get(0).isCarOnLane()|| east_west.get(3).isCarOnLane();
                 }
 
                 //Check if there are pedestrians
                 boolean pedestrianOccupied;
+
+                //TODO Move To Input Controller
                 if(currentDirection==Direction.NS){
                     pedestrianOccupied=north_south_ped.get(0).isPedestrianAt()||north_south_ped.get(1).isPedestrianAt();
                 }else{
                     pedestrianOccupied=east_west_ped.get(0).isPedestrianAt()||east_west_ped.get(1).isPedestrianAt();
                 }
 
-
-                if(turnLaneOccupied&&currentState.nextLeftTurn!=null){
+                if(turnLaneOccupied && currentState.nextLeftTurn!=null){
                     currentState=currentState.nextLeftTurn;
                 }else
-                if(pedestrianOccupied&&currentState.nextPedestrian!=null){
+                if(pedestrianOccupied && currentState.nextPedestrian!=null){
                     currentState=currentState.nextPedestrian;
                 }else{
                     currentState=currentState.next;
@@ -288,7 +287,7 @@ class TestTCS extends Thread {
                 currentTime=System.currentTimeMillis();//Reset Timer
             }
 
-            if(!dayNightMode.getDay()&&currentState.overrideDuringNight){//Check Nighttime Mode
+            if(!dayNightMode.getDay() && currentState.overrideDuringNight){//Check Nighttime Mode
                 //During Nightime Mode, you can ignore the timer
                 // if there is no one traveling in this direction
                 boolean isTrafficNS=false;
@@ -341,69 +340,11 @@ class TestTCS extends Thread {
         System.out.println("Test ended..");
     }
 
-    private void nextState(LinkedList<Lanes> trafficList, LinkedList<Lights> pedList, IntersectionState currentState){
-        trafficList.get(0).setColor((currentState.turn));//Left Turn
-        trafficList.get(1).setColor((currentState.straight));//Straight
-        trafficList.get(2).setColor((currentState.straight));//Straight
-        trafficList.get(3).setColor((currentState.turn));//Left Turn
-        trafficList.get(4).setColor((currentState.straight));//Straight
-        trafficList.get(5).setColor((currentState.straight));//Straight
-        pedList.get(0).setColor((currentState.ped));//Ped
-        pedList.get(1).setColor((currentState.ped));//Ped
-    }
-
-    private void outputSignal(IntersectionState currentState, Direction currentDirection, LinkedList<Lanes> north_south, LinkedList<Lanes> east_west, LinkedList<Lights> north_south_ped, LinkedList<Lights> east_west_ped) {
-        if(currentDirection==Direction.NS){
-            //North/South has control
-            setRed(east_west);//Opposing Side Red
-            nextState(north_south, north_south_ped, currentState);
-
-        }else{
-            //East/West has control
-            setRed(north_south);//Opposing Side Red
-            nextState(east_west, east_west_ped, currentState);
-        }
-    }
 
     public void end(){
         running = false;
     }
 
-
-    private void setRed(LinkedList<Lanes> lanes){
-        for(Lanes l: lanes)
-        {
-            l.setColor(SignalColor.RED);
-        }
-    }
-
-    private Direction detectEmergency(LinkedList<Lanes> north, LinkedList<Lanes> south, LinkedList<Lanes> east, LinkedList<Lanes> west){
-        for(Lanes l: north)
-        {
-            if(l.getEmergencyOnLane()){
-                return Direction.N;
-            }
-        }
-        for(Lanes l: south)
-        {
-            if(l.getEmergencyOnLane()){
-                return Direction.S;
-            }
-        }
-        for(Lanes l: east)
-        {
-            if(l.getEmergencyOnLane()){
-                return Direction.E;
-            }
-        }
-        for(Lanes l: west)
-        {
-            if(l.getEmergencyOnLane()){
-                return Direction.W;
-            }
-        }
-        return null;
-    }
 
 
 
