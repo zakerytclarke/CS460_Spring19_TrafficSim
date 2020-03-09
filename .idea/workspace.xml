@@ -1,24 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4cd5e13-2771-4a7d-b564-6e0be18eb41d" name="Default Changelist" comment="" />
+    <list default="true" id="e4cd5e13-2771-4a7d-b564-6e0be18eb41d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Primary/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Controller/CarInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Controller/CarInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Controller/PedestrianInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Controller/PedestrianInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/CarSignalDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/CarSignalDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Direction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Corner$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Corner$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Corner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Corner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Crossing$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Crossing$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Crossing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Crossing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Ground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Ground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Intersection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Intersection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/LaneDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/LaneDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/RoadDisplay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/RoadDisplay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Simulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Traffic/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Traffic/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Traffic/Pedestrian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Traffic/Pedestrian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/META-INF/CS460_Spring19_TrafficSim.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/CS_460_Traffic_Sim.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/CS_460_Traffic_Sim.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller$Animation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller$Animation$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller$Animation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller$Animation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/DayNight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/DayNight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Direction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Intersection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Intersection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Lanes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Lanes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Lights.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Lights.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/SignalColor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/SignalColor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/TestTCS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/TestTCS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/TestTCS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/TestTCS.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="114384151">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="13" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="882" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="882" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Primary/CS_460_Traffic_Sim.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Primary/TestTCS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="219" column="43" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Primary/OutputController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>currentState</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Primary/OutputController.java" />
+        <option value="$PROJECT_DIR$/src/Primary/TestTCS.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="719" />
+  </component>
   <component name="ProjectId" id="1YoIAvLKM43POMwQ8VJnDLWWkMP" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Primary" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,9 +184,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583718292902" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Primary.Main" />
       <module name="CS460_Spring19_TrafficSim" />
       <extension name="coverage">
@@ -41,11 +217,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,8 +228,52 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1583602380157</updated>
+      <workItem from="1583713406162" duration="2594000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2594000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="719" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.32854864" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32854864" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1291" height="219" key="GridCell.Tab.0.bottom" timestamp="1583640139545">
@@ -85,5 +300,151 @@
       <screen x="0" y="0" width="1333" height="849" />
     </state>
     <state x="330" y="170" width="672" height="678" key="search.everywhere.popup/0.0.1333.849@0.0.1333.849" timestamp="1583632728464" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CS460_Spring19_TrafficSim.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/CS_460_Traffic_Sim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/Lights.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/SignalColor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/IntersectionState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/Intersection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/TestTCS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="219" column="43" selection-start-line="219" selection-start-column="43" selection-end-line="219" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Primary/OutputController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CS460_Spring19_TrafficSim</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -1,5 +1,7 @@
 package Primary;
 
+import com.sun.tools.internal.ws.wsdl.document.Output;
+
 import java.util.LinkedList;
 
 /**
@@ -45,51 +47,62 @@ class TestTCS extends Thread {
         //Day/Night Mode
         DayNight dayNightMode = DayNight.DAY;
         //Valid Intersection States
+
+        //All states red
         IntersectionState Red_All = new IntersectionState(
                 SignalColor.RED,//Light
                 SignalColor.RED,//Turn
                 SignalColor.RED);//Pedestrian
 
+        //Green left turn
         IntersectionState Green_Turn = new IntersectionState(
                 SignalColor.RED,//Light
                 SignalColor.GREEN,//Turn
                 SignalColor.RED);//Pedestrian
 
+        //Yellow left turn
         IntersectionState Yellow_Turn = new IntersectionState(
                 SignalColor.RED,//Light
                 SignalColor.YELLOW,//Turn
                 SignalColor.RED);//Pedestrian
 
+        //Red Turn (equal to all reds)
         IntersectionState Red_Turn = new IntersectionState(
                 SignalColor.RED,//Light
                 SignalColor.RED,//Turn
                 SignalColor.RED);//Pedestrian
 
+        //Green pedestrian cross
         IntersectionState Green_Ped = new IntersectionState(
                 SignalColor.GREEN,//Light
                 SignalColor.RED,//Turn
                 SignalColor.GREEN);//Pedestrian
 
+        //Green pedestrian cross
         IntersectionState Yellow_Ped = new IntersectionState(
                 SignalColor.YELLOW,//Light
                 SignalColor.RED,//Turn
                 SignalColor.YELLOW);//Pedestrian
 
+        //Red pedestrian cross
         IntersectionState Red_Ped = new IntersectionState(
                 SignalColor.RED,//NS Light
                 SignalColor.RED,//NS Turn
                 SignalColor.RED);//EW Pedestrian
 
+        //Green straight
         IntersectionState Green_Light = new IntersectionState(
                 SignalColor.GREEN,//Light
                 SignalColor.RED,//Turn
                 SignalColor.RED);//Pedestrian
 
+        //Yellow straight
         IntersectionState Yellow_Light = new IntersectionState(
                 SignalColor.YELLOW,//Light
                 SignalColor.RED,//Turn
                 SignalColor.RED);//Pedestrian
 
+        //Red straight (all reds)
         IntersectionState Red_Light = new IntersectionState(
                 SignalColor.RED,//Light
                 SignalColor.RED,//Turn
@@ -144,7 +157,7 @@ class TestTCS extends Thread {
         Red_Ped.timer=redClearanceInterval;
 
 
-        IntersectionState currentState=Red_All;
+        IntersectionState currentState = Red_All;
         Direction currentDirection=Direction.EW;
 
          //List of Traffic Lights
@@ -192,7 +205,7 @@ class TestTCS extends Thread {
 
             //Check Emergency
             Direction emergency=detectEmergency(north,south,east,west);
-            if(emergency!=null){//Check Emergency Preemption
+            if(emergency != null){//Check Emergency Preemption
                 //Transition out of state to emergency
                 if(currentState.nextEmergency!=null){
                     currentState=currentState.nextEmergency;
@@ -200,39 +213,25 @@ class TestTCS extends Thread {
                     sleep(currentState.timer);
                 }
 
-
-
                 setRed(north_south);//All cars stop
                 setRed(east_west);//All cars stop
                 outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
-                north_south_ped.get(0).setColor((currentState.ped));//All Ped Stop
-                north_south_ped.get(1).setColor((currentState.ped));//All Ped Stop
-                east_west_ped.get(0).setColor((currentState.ped));//All Ped Stop
-                east_west_ped.get(1).setColor((currentState.ped));//All Ped Stop
-
+                OutputController.stopPeds(north_south_ped, east_west_ped, currentState);
                 sleep(redClearanceInterval);
                 if(emergency==Direction.N){
-                    north.get(0).setColor(SignalColor.GREEN);//Left Turn
-                    north.get(1).setColor(SignalColor.GREEN);//Straight
-                    north.get(2).setColor(SignalColor.GREEN);//Straight
+                    OutputController.handleEmergencyState(north);
                 }
                 if(emergency==Direction.S){
-                    south.get(0).setColor(SignalColor.GREEN);//Left Turn
-                    south.get(1).setColor(SignalColor.GREEN);//Straight
-                    south.get(2).setColor(SignalColor.GREEN);//Straight
+                    OutputController.handleEmergencyState(south);
                 }
                 if(emergency==Direction.E){
-                    east.get(0).setColor(SignalColor.GREEN);//Left Turn
-                    east.get(1).setColor(SignalColor.GREEN);//Straight
-                    east.get(2).setColor(SignalColor.GREEN);//Straight
+                    OutputController.handleEmergencyState(east);
                 }
                 if(emergency==Direction.W){
-                    west.get(0).setColor(SignalColor.GREEN);//Left Turn
-                    west.get(1).setColor(SignalColor.GREEN);//Straight
-                    west.get(2).setColor(SignalColor.GREEN);//Straight
+                    OutputController.handleEmergencyState(west);
                 }
-                while(emergency==detectEmergency(north,south,east,west)){//Wait until ambulance passes
-
+                while(emergency==detectEmergency(north,south,east,west)){
+                    //Wait until ambulance passes
                 }
                 sleep(redClearanceInterval);
                 //Clearance Interval for Emergency Vehicle
@@ -342,31 +341,27 @@ class TestTCS extends Thread {
         System.out.println("Test ended..");
     }
 
+    private void nextState(LinkedList<Lanes> trafficList, LinkedList<Lights> pedList, IntersectionState currentState){
+        trafficList.get(0).setColor((currentState.turn));//Left Turn
+        trafficList.get(1).setColor((currentState.straight));//Straight
+        trafficList.get(2).setColor((currentState.straight));//Straight
+        trafficList.get(3).setColor((currentState.turn));//Left Turn
+        trafficList.get(4).setColor((currentState.straight));//Straight
+        trafficList.get(5).setColor((currentState.straight));//Straight
+        pedList.get(0).setColor((currentState.ped));//Ped
+        pedList.get(1).setColor((currentState.ped));//Ped
+    }
+
     private void outputSignal(IntersectionState currentState, Direction currentDirection, LinkedList<Lanes> north_south, LinkedList<Lanes> east_west, LinkedList<Lights> north_south_ped, LinkedList<Lights> east_west_ped) {
-        if(currentDirection==Direction.NS){//North/South has control
+        if(currentDirection==Direction.NS){
+            //North/South has control
             setRed(east_west);//Opposing Side Red
-            north_south.get(0).setColor((currentState.turn));//Left Turn
-            north_south.get(1).setColor((currentState.straight));//Straight
-            north_south.get(2).setColor((currentState.straight));//Straight
-            north_south.get(3).setColor((currentState.turn));//Left Turn
-            north_south.get(4).setColor((currentState.straight));//Straight
-            north_south.get(5).setColor((currentState.straight));//Straight
-            north_south_ped.get(0).setColor((currentState.ped));//Ped
-            north_south_ped.get(1).setColor((currentState.ped));//Ped
+            nextState(north_south, north_south_ped, currentState);
 
-        }else{//East/West has control
+        }else{
+            //East/West has control
             setRed(north_south);//Opposing Side Red
-
-            east_west.get(0).setColor((currentState.turn));//Left Turn
-            east_west.get(1).setColor((currentState.straight));//Straight
-            east_west.get(2).setColor((currentState.straight));//Straight
-            east_west.get(3).setColor((currentState.turn));//Left Turn
-            east_west.get(4).setColor((currentState.straight));//Straight
-            east_west.get(5).setColor((currentState.straight));//Straight
-
-            east_west_ped.get(0).setColor((currentState.ped));//Ped
-            east_west_ped.get(1).setColor((currentState.ped));//Ped
-
+            nextState(east_west, east_west_ped, currentState);
         }
     }
 
