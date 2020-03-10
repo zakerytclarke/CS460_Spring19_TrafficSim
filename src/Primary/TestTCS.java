@@ -255,28 +255,26 @@ class TestTCS extends Thread {
                     }
                 }
 
+                boolean turnLaneOccupied, pedestrianOccupied;
+
                 //Check if Left turn Lane is occupied
-                boolean turnLaneOccupied;
                 if(currentDirection==Direction.NS){
-                    turnLaneOccupied = north_south.get(0).isCarOnLane()|| north_south.get(3).isCarOnLane();
+                    turnLaneOccupied = VPStateController.carWaiting(north_south);
                 }else{
-                    turnLaneOccupied = east_west.get(0).isCarOnLane()|| east_west.get(3).isCarOnLane();
+                    turnLaneOccupied = VPStateController.carWaiting(east_west);
                 }
 
                 //Check if there are pedestrians
-                boolean pedestrianOccupied;
-
-                //TODO Move To Input Controller
                 if(currentDirection==Direction.NS){
-                    pedestrianOccupied=north_south_ped.get(0).isPedestrianAt()||north_south_ped.get(1).isPedestrianAt();
+                    pedestrianOccupied = VPStateController.pedWaiting(north_south_ped);
                 }else{
-                    pedestrianOccupied=east_west_ped.get(0).isPedestrianAt()||east_west_ped.get(1).isPedestrianAt();
+                    pedestrianOccupied = VPStateController.pedWaiting(east_west_ped);
                 }
 
                 if(turnLaneOccupied && currentState.nextLeftTurn!=null){
                     currentState=currentState.nextLeftTurn;
-                }else
-                if(pedestrianOccupied && currentState.nextPedestrian!=null){
+                }
+                else if(pedestrianOccupied && currentState.nextPedestrian!=null){
                     currentState=currentState.nextPedestrian;
                 }else{
                     currentState=currentState.next;
@@ -290,32 +288,10 @@ class TestTCS extends Thread {
             if(!dayNightMode.getDay() && currentState.overrideDuringNight){//Check Nighttime Mode
                 //During Nightime Mode, you can ignore the timer
                 // if there is no one traveling in this direction
-                boolean isTrafficNS=false;
-                boolean isTrafficEW=false;
-                for(Lanes l: north_south)
-                {
-                    if(l.isCarOnLane()){
-                        isTrafficNS=true;
-                    }
-                }
-                for(Lights l: north_south_ped)
-                {
-                    if(l.isPedestrianAt()){
-                        isTrafficNS=true;
-                    }
-                }
-                for(Lanes l: east_west)
-                {
-                    if(l.isCarOnLane()){
-                        isTrafficEW=true;
-                    }
-                }
-                for(Lights l: east_west_ped)
-                {
-                    if(l.isPedestrianAt()){
-                        isTrafficEW=true;
-                    }
-                }
+                boolean isTrafficNS, isTrafficEW;
+
+                isTrafficNS = VPStateController.anyCar(north_south) || VPStateController.anyPed(north_south_ped);
+                isTrafficEW = VPStateController.anyCar(east_west) || VPStateController.anyPed(east_west_ped);
 
                 if(currentDirection==Direction.NS){//Check NS
                     if(isTrafficEW&&!isTrafficNS){
@@ -331,10 +307,7 @@ class TestTCS extends Thread {
                     }
                 }
 
-
             }
-
-
 
         }
         System.out.println("Test ended..");
@@ -344,8 +317,6 @@ class TestTCS extends Thread {
     public void end(){
         running = false;
     }
-
-
 
 
 }
