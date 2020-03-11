@@ -53,6 +53,7 @@ public class Controller extends Thread{
         {
             // Throwing an exception
             System.out.println ("Exception is caught: " + e.toString());
+            e.printStackTrace();
         }
     }
 
