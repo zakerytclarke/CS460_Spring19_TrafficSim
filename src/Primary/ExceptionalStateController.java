@@ -1,13 +1,18 @@
 package Primary;
 
-import java.util.LinkedList;
-
 /**
  * Class: EmergencyStateController
  * EmergencyStateController will control the e
  */
 public class ExceptionalStateController {
+
     private static Intersection intersection=new Intersection();
+
+    /**
+     * Method: detectEmergency
+     * detects if there is an oncoming emergency vehicle
+     * @return the direction of an oncoming emergency (if applicable)
+     */
     static Direction detectEmergency(){
         for(Lanes l: intersection.north)
         {

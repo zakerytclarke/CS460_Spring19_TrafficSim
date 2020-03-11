@@ -54,8 +54,6 @@ class OutputController {
      *
      */
     static void outputSignal(IntersectionState currentState, Direction currentDirection) {
-
-
         if(currentDirection==Direction.NS){
             //North/South has control
             setRed(intersection.east_west);//Opposing Side Red

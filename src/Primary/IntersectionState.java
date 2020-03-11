@@ -25,10 +25,11 @@ public class IntersectionState {
     public boolean overrideDuringNight=false;//Whether the light phase can be shortened during night
 
     /**
+     * Constructor:IntersectionState
      * Sets Output for State
-     * @param light_Set
-     * @param turn_Set
-     * @param ped_Set
+     * @param light_Set the current light set
+     * @param turn_Set the turn set for color
+     * @param ped_Set the pedestrian color set
      */
     public IntersectionState(SignalColor light_Set, SignalColor turn_Set, SignalColor ped_Set){
         straight=light_Set;
