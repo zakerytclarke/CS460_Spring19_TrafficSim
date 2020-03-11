@@ -7,15 +7,38 @@ import java.util.LinkedList;
  * signal lights
  */
 class OutputController {
+
     /**
      * Method: handleEmergencyState
-     * handles the emergency state for a vehicle coming from the given lane
-     * @param laneList list of lanes of the direction of the emergency vehicle
+     * handleEmergencyState will handle the given emergency direction
+     * @param emergency emergency direction
+     * @param north north lanes
+     * @param south south lanes
+     * @param east east lanes
+     * @param west west lanes
      */
-    static void handleEmergencyState(LinkedList<Lanes> laneList) {
-        laneList.get(0).setColor(SignalColor.GREEN);//Left Turn
-        laneList.get(1).setColor(SignalColor.GREEN);//Straight
-        laneList.get(2).setColor(SignalColor.GREEN);//Straight
+    static void handleEmergencyState(Direction emergency,LinkedList<Lanes> north,LinkedList<Lanes> south,
+                                     LinkedList<Lanes> east, LinkedList<Lanes> west) {
+        if(emergency==Direction.N){
+            north.get(0).setColor(SignalColor.GREEN);//Left Turn
+            north.get(1).setColor(SignalColor.GREEN);//Straight
+            north.get(2).setColor(SignalColor.GREEN);//Straight
+            }
+        if(emergency==Direction.S) {
+            south.get(0).setColor(SignalColor.GREEN);//Left Turn
+            south.get(1).setColor(SignalColor.GREEN);//Straight
+            south.get(2).setColor(SignalColor.GREEN);//Straight
+        }
+        if(emergency==Direction.E) {
+            east.get(0).setColor(SignalColor.GREEN);//Left Turn
+            east.get(1).setColor(SignalColor.GREEN);//Straight
+            east.get(2).setColor(SignalColor.GREEN);//Straight
+        }
+        if(emergency==Direction.W) {
+            west.get(0).setColor(SignalColor.GREEN);//Left Turn
+            west.get(1).setColor(SignalColor.GREEN);//Straight
+            west.get(2).setColor(SignalColor.GREEN);//Straight
+        }
 
     }
 

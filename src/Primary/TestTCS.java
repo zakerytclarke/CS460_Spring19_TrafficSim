@@ -114,6 +114,8 @@ class TestTCS extends Thread {
         int yellowClearanceInterval=2000;
         int redClearanceInterval=500;
 
+
+        //TODO Make this pretty
         //Setup Connections
         Red_All.next=Green_Light;//Default Transition
         Red_All.nextLeftTurn=Green_Turn;//Default Transition
@@ -194,6 +196,7 @@ class TestTCS extends Thread {
 
         long currentTime=System.currentTimeMillis();
         long currentTimer=currentState.timer;
+        //TODO This is also never used, part of bug?
         long currentPedestrianTimer=3000;
 
         while(running){
@@ -206,6 +209,15 @@ class TestTCS extends Thread {
             //Check Emergency
             Direction emergency = ExceptionalStateController.detectEmergency(north,south,east,west);
 
+
+            /**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * Emergency control logic for the system
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             */
             if(emergency != null){//Check Emergency Preemption
                 //Transition out of state to emergency
                 if(currentState.nextEmergency!=null){
@@ -213,24 +225,13 @@ class TestTCS extends Thread {
                     OutputController.outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
                     sleep(currentState.timer);
                 }
-
+                //TODO BUG STARTS HERE
                 OutputController.setRed(north_south);//All cars stop
                 OutputController.setRed(east_west);//All cars stop
                 OutputController.outputSignal(currentState,currentDirection,north_south,east_west,north_south_ped,east_west_ped);
                 OutputController.stopPeds(north_south_ped, east_west_ped, currentState);
                 sleep(redClearanceInterval);
-                if(emergency==Direction.N){
-                    OutputController.handleEmergencyState(north);
-                }
-                if(emergency==Direction.S){
-                    OutputController.handleEmergencyState(south);
-                }
-                if(emergency==Direction.E){
-                    OutputController.handleEmergencyState(east);
-                }
-                if(emergency==Direction.W){
-                    OutputController.handleEmergencyState(west);
-                }
+                OutputController.handleEmergencyState(emergency,north, south, east, west);
                 while(emergency== ExceptionalStateController.detectEmergency(north,south,east,west)){
                     //Wait until ambulance passes
                 }
@@ -242,9 +243,6 @@ class TestTCS extends Thread {
                 currentState=Red_All;
 
             }
-
-
-
             if(System.currentTimeMillis()>currentTime+currentTimer){//Check Timer has elapsed
                 System.out.println(currentState.turn.toString()+":"+currentState.straight.toString()+":"+currentState.ped.toString()+":"+currentDirection.toString()+":"+currentTimer);
                 if(currentState.changeDirection){//Change direction if cycle is done
@@ -255,26 +253,12 @@ class TestTCS extends Thread {
                     }
                 }
 
-                boolean turnLaneOccupied, pedestrianOccupied;
-
-                //Check if Left turn Lane is occupied
-                if(currentDirection==Direction.NS){
-                    turnLaneOccupied = VPStateController.carWaiting(north_south);
-                }else{
-                    turnLaneOccupied = VPStateController.carWaiting(east_west);
-                }
-
-                //Check if there are pedestrians
-                if(currentDirection==Direction.NS){
-                    pedestrianOccupied = VPStateController.pedWaiting(north_south_ped);
-                }else{
-                    pedestrianOccupied = VPStateController.pedWaiting(east_west_ped);
-                }
-
-                if(turnLaneOccupied && currentState.nextLeftTurn!=null){
+                if(VPStateController.occupiedTurn(currentDirection, north_south, east_west)
+                        && currentState.nextLeftTurn!=null){
                     currentState=currentState.nextLeftTurn;
                 }
-                else if(pedestrianOccupied && currentState.nextPedestrian!=null){
+                else if(VPStateController.occupiedPed(currentDirection, north_south_ped, east_west_ped)
+                        && currentState.nextPedestrian!=null){
                     currentState=currentState.nextPedestrian;
                 }else{
                     currentState=currentState.next;
@@ -284,7 +268,14 @@ class TestTCS extends Thread {
                 currentTimer=currentState.timer;//Set next timer
                 currentTime=System.currentTimeMillis();//Reset Timer
             }
-
+            /**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * Nighttime control logic for the system
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             */
             if(!dayNightMode.getDay() && currentState.overrideDuringNight){//Check Nighttime Mode
                 //During Nightime Mode, you can ignore the timer
                 // if there is no one traveling in this direction
@@ -294,13 +285,15 @@ class TestTCS extends Thread {
                 isTrafficEW = VPStateController.anyCar(east_west) || VPStateController.anyPed(east_west_ped);
 
                 if(currentDirection==Direction.NS){//Check NS
-                    if(isTrafficEW&&!isTrafficNS){
+                    if((isTrafficEW && !isTrafficNS) ||
+                            ((System.currentTimeMillis()>currentTime+currentTimer) && isTrafficEW)){
                         currentState=currentState.next;
                         currentTimer=currentState.timer;//Set next timer
                         currentTime=System.currentTimeMillis();//Reset Timer
                     }
                 }else{//Check EW
-                    if(isTrafficNS&&!isTrafficEW){
+                    if((!isTrafficEW && isTrafficNS) ||
+                            ((System.currentTimeMillis()>currentTime+currentTimer) && isTrafficNS)){
                         currentState=currentState.next;
                         currentTimer=currentState.timer;//Set next timer
                         currentTime=System.currentTimeMillis();//Reset Timer
