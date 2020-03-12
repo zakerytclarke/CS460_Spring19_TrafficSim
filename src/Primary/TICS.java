@@ -37,7 +37,7 @@ public class TICS {
 
         while(running){//Runtime Loop
 
-            //Debug System.out.println(currentState.straight+":"+currentState.turn+":"+currentState.ped+":"+currentState.timer+":"+currentState.next.toString());
+            System.out.println(currentState.straight+":"+currentState.turn+":"+currentState.ped+":"+currentState.timer+":"+currentDirection);
             //Execute current state
            outputController.outputSignal(currentState,currentDirection);
 
@@ -47,46 +47,19 @@ public class TICS {
             Direction emergency = ExceptionalStateController.detectEmergency();
 
             if(emergency != null) {//Check Emergency Preemption
-                if (currentState.equals(states.Green_Turn)){
-                    currentState=states.Yellow_Turn;
+                if(!(currentState.straight==SignalColor.RED&&
+                        currentState.turn==SignalColor.RED&&
+                        currentState.ped==SignalColor.RED)
+                ){
+                    currentState=states.All_Yellow;//Clearance Interval
                     outputController.outputSignal(currentState,currentDirection);
                     sleep(states.yellowClearanceInterval);
-                    currentState=states.Emergency_Red;//Red Clearance Interval
-                    outputController.outputSignal(currentState,currentDirection);
-                    sleep(states.redClearanceInterval);
                 }
-                if (currentState.equals(states.Yellow_Turn)){
-                    sleep(states.yellowClearanceInterval);
-                    currentState=states.Emergency_Red;//Red Clearance Interval
-                    outputController.outputSignal(currentState,currentDirection);
-                    sleep(states.redClearanceInterval);
-                }
-                if (currentState.equals(states.Green_Light)){
-                    currentState=states.Yellow_Light;
-                    outputController.outputSignal(currentState,currentDirection);
-                    sleep(states.yellowClearanceInterval);
-                    currentState=states.Emergency_Red;//Red Clearance Interval
-                    outputController.outputSignal(currentState,currentDirection);
-                    sleep(states.redClearanceInterval);
-                }
-                if (currentState.equals(states.Yellow_Light)){
-                    sleep(states.yellowClearanceInterval);
-                    currentState=states.Emergency_Red;//Red Clearance Interval
-                    outputController.outputSignal(currentState,currentDirection);
-                    sleep(states.redClearanceInterval);
-                }
-                if (currentState.equals(states.Green_Ped)){
-                    sleep(states.yellowClearanceInterval);
-                    currentState=states.Emergency_Red;//Red Clearance Interval
-                    outputController.outputSignal(currentState,currentDirection);
-                    sleep(states.redClearanceInterval);
-                }
-//                currentState=states.All_Yellow;//Clearance Interval
-//                outputController.outputSignal(currentState,currentDirection);
-//                sleep(states.yellowClearanceInterval);
-//               currentState=states.Emergency_Red;//Red Clearance Interval
-//               outputController.outputSignal(currentState,currentDirection);
-//               sleep(states.redClearanceInterval);
+
+
+               currentState=states.Emergency_Red;//Red Clearance Interval
+               outputController.outputSignal(currentState,currentDirection);
+               sleep(states.redClearanceInterval);
                Direction prevDirection=currentDirection;
                currentDirection=emergency;
                currentState=states.Emergency_State;//Emergency Crossing State
@@ -98,9 +71,12 @@ public class TICS {
                sleep(states.yellowClearanceInterval);
                currentState=states.Emergency_Red;//Red Clearance Out
                currentDirection=prevDirection;
+               /*
                outputController.outputSignal(currentState,currentDirection);
                sleep(states.yellowClearanceInterval);
                currentState=states.Red_All;
+               */
+
             }
 
 

@@ -160,7 +160,7 @@ public class States {
         Yellow_Turn_Emergency.timer=yellowClearanceInterval;
         Yellow_Ped_Emergency.next=Emergency_Red;//Default Transition
         Yellow_Ped_Emergency.timer=yellowClearanceInterval;
-        Emergency_Red.next=Emergency_State;//Default Transition
+        Emergency_Red.next=Red_All;//Default Transition
         Emergency_Red.changeDirection=true;//Switch to Emergency Vehicle Direction
         Emergency_Red.timer=yellowClearanceInterval;
         Emergency_State.next=Yellow_Light_Out_Emergency;//Transition back to Normal

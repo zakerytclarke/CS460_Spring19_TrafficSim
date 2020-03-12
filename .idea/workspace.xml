@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e4cd5e13-2771-4a7d-b564-6e0be18eb41d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/ExceptionalStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/ExceptionalStateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/InputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/IntersectionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/IntersectionState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/IntervalStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/IntervalStateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/States.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/States.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Primary/TICS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/TICS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +28,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
@@ -37,7 +50,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583954113990" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CS460_Spring19_TrafficSim-669c88b44ba4f04615415b794829fb063b9a0421" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -92,7 +105,6 @@
       <updated>1583602380157</updated>
       <workItem from="1583713406162" duration="6236000" />
       <workItem from="1583809047928" duration="1740000" />
-      <workItem from="1583977396354" duration="6269000" />
     </task>
     <task id="LOCAL-00001" summary="add comments&#10;create OutputController to organize code">
       <created>1583718472386</created>
@@ -108,15 +120,11 @@
       <option name="project" value="LOCAL" />
       <updated>1583793577912</updated>
     </task>
-    <task id="LOCAL-00003" summary="&quot;emergency bug partially fixed&quot;">
-      <created>1583983384625</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1583983384626</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9331000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -124,59 +132,41 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add comments&#10;create OutputController to organize code" />
     <MESSAGE value="add OutputController&#10;add ExceptionalStateController&#10;add TODO for Input controller" />
-    <MESSAGE value="&quot;emergency bug partially fixed&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;emergency bug partially fixed&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add OutputController&#10;add ExceptionalStateController&#10;add TODO for Input controller" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="330" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583977402563">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state x="518" y="314" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583891971445">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
     <state x="518" y="314" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1333.849@0.0.1333.849" timestamp="1583891971445" />
-    <state x="560" y="330" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.831@0.23.1440.831" timestamp="1583977402563" />
     <state x="399" y="172" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583896058130">
       <screen x="0" y="0" width="1333" height="849" />
     </state>
     <state x="399" y="172" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1333.849@0.0.1333.849" timestamp="1583896058130" />
-    <state x="270" y="23" key="CommitChangelistDialog2" timestamp="1583983384123">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state x="270" y="23" key="CommitChangelistDialog2/0.23.1440.830@0.23.1440.830" timestamp="1583983384123" />
-    <state x="449" y="180" key="FileChooserDialogImpl" timestamp="1583892647586">
+    <state x="449" y="180" key="FileChooserDialogImpl" timestamp="1583981621954">
       <screen x="0" y="0" width="1333" height="849" />
     </state>
-    <state x="449" y="180" key="FileChooserDialogImpl/0.0.1333.849@0.0.1333.849" timestamp="1583892647586" />
-    <state width="1358" height="124" key="GridCell.Tab.0.bottom" timestamp="1583984584932">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state width="1291" height="219" key="GridCell.Tab.0.bottom/0.0.1333.849@0.0.1333.849" timestamp="1583913204324" />
-    <state width="1358" height="124" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1583984584932" />
-    <state width="1358" height="124" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1583984412035" />
-    <state width="1358" height="124" key="GridCell.Tab.0.center" timestamp="1583984584931">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state width="1291" height="219" key="GridCell.Tab.0.center/0.0.1333.849@0.0.1333.849" timestamp="1583913204324" />
-    <state width="1358" height="124" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1583984584931" />
-    <state width="1358" height="124" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1583984412034" />
-    <state width="1358" height="124" key="GridCell.Tab.0.left" timestamp="1583984584930">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state width="1291" height="219" key="GridCell.Tab.0.left/0.0.1333.849@0.0.1333.849" timestamp="1583913204323" />
-    <state width="1358" height="124" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1583984584930" />
-    <state width="1358" height="124" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1583984412034" />
-    <state width="1358" height="124" key="GridCell.Tab.0.right" timestamp="1583984584932">
-      <screen x="0" y="23" width="1440" height="830" />
-    </state>
-    <state width="1291" height="219" key="GridCell.Tab.0.right/0.0.1333.849@0.0.1333.849" timestamp="1583913204324" />
-    <state width="1358" height="124" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1583984584932" />
-    <state width="1358" height="124" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1583984412035" />
-    <state x="149" y="0" key="SettingsEditor" timestamp="1583899301033">
+    <state x="449" y="180" key="FileChooserDialogImpl/0.0.1333.849@0.0.1333.849" timestamp="1583981621954" />
+    <state width="1291" height="219" key="GridCell.Tab.0.bottom" timestamp="1583984757431">
       <screen x="0" y="0" width="1333" height="849" />
     </state>
-    <state x="149" y="0" key="SettingsEditor/0.0.1333.849@0.0.1333.849" timestamp="1583899301033" />
-    <state x="340" y="174" key="Vcs.Push.Dialog.v2" timestamp="1583983388466">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state width="1291" height="219" key="GridCell.Tab.0.bottom/0.0.1333.849@0.0.1333.849" timestamp="1583984757431" />
+    <state width="1291" height="219" key="GridCell.Tab.0.center" timestamp="1583984757431">
+      <screen x="0" y="0" width="1333" height="849" />
     </state>
-    <state x="340" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1583983388466" />
+    <state width="1291" height="219" key="GridCell.Tab.0.center/0.0.1333.849@0.0.1333.849" timestamp="1583984757431" />
+    <state width="1291" height="219" key="GridCell.Tab.0.left" timestamp="1583984757431">
+      <screen x="0" y="0" width="1333" height="849" />
+    </state>
+    <state width="1291" height="219" key="GridCell.Tab.0.left/0.0.1333.849@0.0.1333.849" timestamp="1583984757431" />
+    <state width="1291" height="219" key="GridCell.Tab.0.right" timestamp="1583984757431">
+      <screen x="0" y="0" width="1333" height="849" />
+    </state>
+    <state width="1291" height="219" key="GridCell.Tab.0.right/0.0.1333.849@0.0.1333.849" timestamp="1583984757431" />
+    <state x="149" y="0" key="SettingsEditor" timestamp="1583981109604">
+      <screen x="0" y="0" width="1333" height="849" />
+    </state>
+    <state x="149" y="0" key="SettingsEditor/0.0.1333.849@0.0.1333.849" timestamp="1583981109604" />
     <state x="371" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1583602414718">
       <screen x="0" y="0" width="1333" height="849" />
     </state>
