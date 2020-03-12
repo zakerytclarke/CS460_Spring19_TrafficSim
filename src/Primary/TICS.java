@@ -47,13 +47,32 @@ public class TICS {
             Direction emergency = ExceptionalStateController.detectEmergency();
 
             if(emergency != null) {//Check Emergency Preemption
-
-                currentState=states.All_Yellow;//Clearance Interval
-                outputController.outputSignal(currentState,currentDirection);
-                sleep(states.yellowClearanceInterval);
-               currentState=states.Emergency_Red;//Red Clearance Interval
-               outputController.outputSignal(currentState,currentDirection);
-               sleep(states.redClearanceInterval);
+                if (currentState.equals(states.Green_Turn)){
+                    currentState=states.Yellow_Turn;
+                    outputController.outputSignal(currentState,currentDirection);
+                }
+                if (currentState.equals(states.Yellow_Turn)){
+                    sleep(states.yellowClearanceInterval);
+                    currentState=states.Emergency_Red;//Red Clearance Interval
+                    outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.redClearanceInterval);
+                }
+                if (currentState.equals(states.Green_Light)){
+                    currentState=states.Yellow_Light;
+                    outputController.outputSignal(currentState,currentDirection);
+                }
+                if (currentState.equals(states.Yellow_Light)){
+                    sleep(states.yellowClearanceInterval);
+                    currentState=states.Emergency_Red;//Red Clearance Interval
+                    outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.redClearanceInterval);
+                }
+//                currentState=states.All_Yellow;//Clearance Interval
+//                outputController.outputSignal(currentState,currentDirection);
+//                sleep(states.yellowClearanceInterval);
+//               currentState=states.Emergency_Red;//Red Clearance Interval
+//               outputController.outputSignal(currentState,currentDirection);
+//               sleep(states.redClearanceInterval);
                Direction prevDirection=currentDirection;
                currentDirection=emergency;
                currentState=states.Emergency_State;//Emergency Crossing State

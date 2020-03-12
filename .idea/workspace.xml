@@ -4,57 +4,13 @@
     <list default="true" id="e4cd5e13-2771-4a7d-b564-6e0be18eb41d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primary/ExceptionalStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/ExceptionalStateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primary/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primary/IntersectionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/IntersectionState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primary/IntervalStateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/IntervalStateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Primary/OutputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/OutputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Primary/TICS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Primary/TICS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="114384151">
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="1206" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1206" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Primary/InputController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-              <folding>
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,74 +23,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Primary/OutputController.java" />
-        <option value="$PROJECT_DIR$/src/Primary/ExceptionalStateController.java" />
-        <option value="$PROJECT_DIR$/src/Primary/IntervalStateController.java" />
-        <option value="$PROJECT_DIR$/src/Primary/IntersectionState.java" />
-        <option value="$PROJECT_DIR$/src/Primary/InputController.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="719" />
   </component>
   <component name="ProjectId" id="1YoIAvLKM43POMwQ8VJnDLWWkMP" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Graphics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Graphics" type="462c0819:PsiDirectoryNode" />
-              <item name="Traffic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS460_Spring19_TrafficSim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS460_Spring19_TrafficSim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Primary" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -145,173 +39,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583954113990" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CS460_Spring19_TrafficSim-1335ab13abef92691be88747de047abba76606f1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Controller/CarInput.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Controller/PedestrianInput.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/CarSignalDisplay.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Direction.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Corner$1.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Corner.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Crossing$1.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Crossing.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Ground.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/Intersection.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/LaneDisplay.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Grounds/RoadDisplay.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Simulation.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Traffic/Car.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Graphics/Traffic/Pedestrian.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/CS_460_Traffic_Sim.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller$Animation$1.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller$Animation.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Controller.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/DayNight.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Direction.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Intersection.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/IntersectionState.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Lanes.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Lights.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/Main.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/SignalColor.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/production/CS460_Spring19_TrafficSim/Primary/TestTCS.class</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/Controller.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/ExceptionalStateController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/Intersection.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/IntersectionState.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/OutputController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/TestTCS.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/InputController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/IntervalStateController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/States.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/TICS.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Primary/VPStateController.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="CS_460_Traffic_Sim" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -362,6 +94,7 @@
       <updated>1583602380157</updated>
       <workItem from="1583713406162" duration="6236000" />
       <workItem from="1583809047928" duration="1740000" />
+      <workItem from="1583977396354" duration="5037000" />
     </task>
     <task id="LOCAL-00001" summary="add comments&#10;create OutputController to organize code">
       <created>1583718472386</created>
@@ -380,73 +113,6 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9331000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="719" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32854864" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32854864" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32854864" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32854864" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -456,10 +122,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="add OutputController&#10;add ExceptionalStateController&#10;add TODO for Input controller" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="518" y="314" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583891971445">
-      <screen x="0" y="0" width="1333" height="849" />
+    <state x="560" y="330" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583977402563">
+      <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="518" y="314" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1333.849@0.0.1333.849" timestamp="1583891971445" />
+    <state x="560" y="330" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.831@0.23.1440.831" timestamp="1583977402563" />
     <state x="399" y="172" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583896058130">
       <screen x="0" y="0" width="1333" height="849" />
     </state>
@@ -468,22 +135,30 @@
       <screen x="0" y="0" width="1333" height="849" />
     </state>
     <state x="449" y="180" key="FileChooserDialogImpl/0.0.1333.849@0.0.1333.849" timestamp="1583892647586" />
-    <state width="1291" height="219" key="GridCell.Tab.0.bottom" timestamp="1583913204324">
-      <screen x="0" y="0" width="1333" height="849" />
+    <state width="1358" height="124" key="GridCell.Tab.0.bottom" timestamp="1583983320459">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1291" height="219" key="GridCell.Tab.0.bottom/0.0.1333.849@0.0.1333.849" timestamp="1583913204324" />
-    <state width="1291" height="219" key="GridCell.Tab.0.center" timestamp="1583913204324">
-      <screen x="0" y="0" width="1333" height="849" />
+    <state width="1358" height="124" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1583983320459" />
+    <state width="1358" height="124" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1583982449807" />
+    <state width="1358" height="124" key="GridCell.Tab.0.center" timestamp="1583983320457">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1291" height="219" key="GridCell.Tab.0.center/0.0.1333.849@0.0.1333.849" timestamp="1583913204324" />
-    <state width="1291" height="219" key="GridCell.Tab.0.left" timestamp="1583913204323">
-      <screen x="0" y="0" width="1333" height="849" />
+    <state width="1358" height="124" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1583983320457" />
+    <state width="1358" height="124" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1583982449805" />
+    <state width="1358" height="124" key="GridCell.Tab.0.left" timestamp="1583983320457">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1291" height="219" key="GridCell.Tab.0.left/0.0.1333.849@0.0.1333.849" timestamp="1583913204323" />
-    <state width="1291" height="219" key="GridCell.Tab.0.right" timestamp="1583913204324">
-      <screen x="0" y="0" width="1333" height="849" />
+    <state width="1358" height="124" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1583983320457" />
+    <state width="1358" height="124" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1583982449804" />
+    <state width="1358" height="124" key="GridCell.Tab.0.right" timestamp="1583983320458">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1291" height="219" key="GridCell.Tab.0.right/0.0.1333.849@0.0.1333.849" timestamp="1583913204324" />
+    <state width="1358" height="124" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1583983320458" />
+    <state width="1358" height="124" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1583982449806" />
     <state x="149" y="0" key="SettingsEditor" timestamp="1583899301033">
       <screen x="0" y="0" width="1333" height="849" />
     </state>
@@ -500,64 +175,5 @@
       <screen x="0" y="0" width="1333" height="849" />
     </state>
     <state x="330" y="170" width="672" height="678" key="search.everywhere.popup/0.0.1333.849@0.0.1333.849" timestamp="1583900919151" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Primary/OutputController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="55" column="90" selection-start-line="55" selection-start-column="90" selection-end-line="55" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primary/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primary/ExceptionalStateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primary/IntervalStateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primary/Lights.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primary/IntersectionState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Primary/InputController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-          <folding>
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
