@@ -50,6 +50,10 @@ public class TICS {
                 if (currentState.equals(states.Green_Turn)){
                     currentState=states.Yellow_Turn;
                     outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.yellowClearanceInterval);
+                    currentState=states.Emergency_Red;//Red Clearance Interval
+                    outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.redClearanceInterval);
                 }
                 if (currentState.equals(states.Yellow_Turn)){
                     sleep(states.yellowClearanceInterval);
@@ -60,8 +64,18 @@ public class TICS {
                 if (currentState.equals(states.Green_Light)){
                     currentState=states.Yellow_Light;
                     outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.yellowClearanceInterval);
+                    currentState=states.Emergency_Red;//Red Clearance Interval
+                    outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.redClearanceInterval);
                 }
                 if (currentState.equals(states.Yellow_Light)){
+                    sleep(states.yellowClearanceInterval);
+                    currentState=states.Emergency_Red;//Red Clearance Interval
+                    outputController.outputSignal(currentState,currentDirection);
+                    sleep(states.redClearanceInterval);
+                }
+                if (currentState.equals(states.Green_Ped)){
                     sleep(states.yellowClearanceInterval);
                     currentState=states.Emergency_Red;//Red Clearance Interval
                     outputController.outputSignal(currentState,currentDirection);
