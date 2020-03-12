@@ -1,5 +1,5 @@
 package Primary;
-
+import java.util.LinkedList;
 /**
  * Class: EmergencyStateController
  * EmergencyStateController will control the e
@@ -39,5 +39,34 @@ public class ExceptionalStateController {
             }
         }
         return null;
+
     }
+    static void powerMode(LinkedList<Lanes> ns, LinkedList<Lanes> ew, LinkedList<Lights> nsped, LinkedList<Lights> ewped)
+    {
+        boolean hasPower = true;
+        //boolean hasPower = Sensor.pulsePower();
+        int stopLightimer = 350;
+        long curTime = System.currentTimeMillis();
+        OutputController.stopPeds(nsped, ewped, null);
+
+        while(!hasPower) {
+            if(ns.get(0).getSignal() == SignalColor.GREEN && System.currentTimeMillis() > curTime + stopLightimer) {
+                OutputController.setRed(ns);
+                for(int i = 0; i < 3; i++) ew.get(i).setColor(SignalColor.GREEN);
+            }
+            if(ew.get(0).getSignal() == SignalColor.GREEN && System.currentTimeMillis() > curTime + stopLightimer) {
+                OutputController.setRed(ew);
+                for(int i = 0; i < 3; i++) ns.get(i).setColor(SignalColor.GREEN);
+            }
+            curTime = System.currentTimeMillis();
+        }
+
+    }
+
+    static void maintenanceMode(LinkedList<Lights> nsped, LinkedList<Lights> ewped, LinkedList<Lanes> lanes) {
+        OutputController.stopPeds(nsped, ewped, null);
+        OutputController.setRed(lanes);
+    }
+
+
 }

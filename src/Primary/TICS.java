@@ -36,8 +36,7 @@ public class TICS {
 
 
         while(running){//Runtime Loop
-
-            System.out.println(currentState.straight+":"+currentState.turn+":"+currentState.ped+":"+currentState.timer+":"+currentDirection);
+             System.out.println(currentState.straight+":"+currentState.turn+":"+currentState.ped+":"+currentState.timer+":"+currentDirection);
             //Execute current state
            outputController.outputSignal(currentState,currentDirection);
 
@@ -78,9 +77,6 @@ public class TICS {
                */
 
             }
-
-
-
 
 
             if(System.currentTimeMillis()>currentTime+currentTimer&&currentState.timer!=-1){//Check Timer has elapsed
@@ -155,4 +151,8 @@ public class TICS {
 
         }
     }
+    void switchOn() {
+        ExceptionalStateController.maintenanceMode(null,null,null);
+    }
+
 }
